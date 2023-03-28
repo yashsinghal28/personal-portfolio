@@ -632,29 +632,30 @@ yash-singhal-848537226/" target="_blank" class="home__social-icon">
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid" onsubmit="sendEmail(); reset(); return false;">
+                <form action="https://formspree.io/f/mdovwoer"
+  method="POST" class="contact__form grid" >
                     <div class="contact__inputs grid">
                         <div class="contact__content" >
                             <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input" id="name">
+                            <input type="text" name="name" class="contact__input">
                         </div>
                         <div class="contact__content" >
                             <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input" id"email">
+                            <input type="email" name="email" class="contact__input">
                         </div>
                     </div>
                     <div class="contact__content" >
                         <label for="" class="contact__label">Project</label>
-                        <input type="text" class="contact__input" id="project">
+                        <input type="text" name="project" class="contact__input">
                     </div>
                     <div class="contact__content" >
                         <label for="" class="contact__label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input" id="message"></textarea>
+                        <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
                     </div>
 
                     <div>
                         <a href="#" class="button button--flex">
-                            Send
+                            Send Message
                             <i class="uil uil-message button__icon"></i>
                         </a>
                     </div>
@@ -709,24 +710,5 @@ yash-singhal-848537226/" target="_blank" class="home__social-icon">
 
     <script src="swiper-bundle.min.js"></script>
     <script src="main.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-     function sendEmail(){
-        Email.send({
-             Host : "smtp.gmail.com",
-             Username : "yashsinghal282003@gmail.com",
-             Password : "singhalqwerty",
-             To : 'Singhal.ysll@gmail.com',
-             From : document.getElementById("email").value,
-             Subject : "New contact form for enquiry",
-             Body : "Name: " + document.getElementById("name").value
-                    + "<br> Email: " + document.getElementById("email").value
-                    + "<br> Project: " + document.getElementById("project").value
-                    + "<br> Message " + document.getElementById("message").value
-     }).then(
-        message => alert("Message Sent Succesfully")
-    );
-    }
-   </script>
 </body>
 </html>
